@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE Html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Introduction</title>
+	<style>
+		p.hell{
+margin-top: 15px;
+margin-right: 15px;
+font-size:20px;
+  color:white;
+}
+.active
+{background-color: black;
+  color: white;
+}
+
+.transparentText {
+	margin-top: 20px;
+   margin-left: 70px;
+   margin-right: 70px;
+   background-color: lightgrey;
+   border: 1px solid black;
+}
+.transparentText p {
+   margin: 5%;
+   font-weight: bolder;
+   color: black;
+   font-size: 20px;
+}
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+
+	<div class="full-page">
+		<section class="topnav">
+		<a><img src="{% static 'Rvlogo.png' %}" class="logo"> </a>
+		<center><p class="p"> Department of MCA <br>
+		RV College of Engineering&reg; <p></center>
+		<a href='/'><img src="{% static 'cars1.png' %}" class="logo1"></a>
+        <div class="navbar">
+
+            <nav>
+		<center>
+                <ul id='MenuItems'>
+					{% if user.is_authenticated %}
+                    <li><a class="active" href='/intro'>Introduction</a></li>
+					<li><a href='/data'>Data Description</a></li>
+                    <li><a href='/methods'>Methodology</a></li>
+					<li><a href='/eda'>EDA</a></li>
+					<li><a href='/result'>Prediction</a></li>
+                    <li><a href='/accuracy'>Results</a></li>
+					<li><a href='/contact'>Contact Us</a></li><br>
+
+
+			<li><p class="hell">Hello, {{user.first_name}}</p></li>
+			<li><a href="/accounts/logout">Logout</a></li>
+		{% else %}<li><a class="active" href='/intro'>Introduction</a></li>
+			<li><a href="/accounts/login">Login</a></li>
+			<li><a href="/accounts/register">SignUp</a></li>
+
+		{% endif %}
+                </ul>
+			<div class="transparentBox">
+<div class="transparentText">
+			<p>The prices of new cars in the industry are fixed by the manufacturer with some additional costs incurred by the
+				Government in the form of taxes. So customers buying a new car can be assured of the money they invest to be
+				worthy. Predicting the prices of used cars is an interesting and much-needed problem to be addressed.
+				Customers can be widely exploited by fixing unrealistic prices for the used cars and many falls into this trap.
+				<br>Why customers want to used cars reasons are: Save money and they can upgrade his segment, no cheating here now
+				get certified used cars with warranty, Slower depreciation means they lose less money, Insurance is cheaper,
+				and they need not pay additional charges.<br> The used car market in India has been the center of attention in the
+				slow growing automotive industry in India.
+<br> <br>The project will be developed using Django as a web framework to make website dynamic. Python as backend.
+				MySQL will be used as database for storing the data. Html, CSS, Bootstrap, JavaScript for the GUI, and frontend.
+				The model will be trained with used car dataset from UCI repository. The project will be consisting of Machine
+				Learning algorithm like Linear Regression, Random forest regression for prediction.
+				<br>The aim of the project is to use Machine Learning algorithm to develop models for predicting used car price.
+</p>
+</div>
+			</div>
+		</center>
+            </nav>
+        </div>
+
+
+
+
+<div class="footer">
+  <p>&copy; Developed by Prateek Shetty-1RD19MCA02 and Sudhir Sahu-1RD19MCA17<br>IV Semester</p>
+</div>	</section>
+	</div>
+</body>
+</html>

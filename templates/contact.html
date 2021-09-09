@@ -1,0 +1,88 @@
+{% load static %}
+<!DOCTYPE Html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Contact Us</title>
+	<style>
+		p.hell{
+margin-top: 15px;
+margin-right: 15px;
+font-size:20px;
+  color:white;
+}	#map {
+top:200px;
+position:absolute;
+		height: 400px;
+		width: 50%;
+	}
+	.transparentText {
+	top:200px;
+   left:760px;
+position:absolute;
+   background-color: lightgreen;
+   border: 1px solid black;
+   opacity: 0.8;
+
+}
+.transparentText p {
+   font-weight: bolder;
+   color: black;
+   font-size: 20px;
+}
+
+	</style>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="full-page">
+		<section class="topnav">
+		<a><img src="{% static 'Rvlogo.png' %}" class="logo"> </a>
+		<center><p class="p"> Department of MCA <br>
+		RV College of Engineering&reg; <p></center>
+		<a href='/'><img src="{% static 'cars1.png' %}" class="logo1"></a>
+        </section>
+
+      <div class="transparentBox">
+<div class="transparentText">
+			<p><b>Prateek Shetty</b></p>
+  <i class="fa fa-phone" style="font-size:24px">7021064715</i><br>
+  <p class="fa fa-envelope" style="font-size:24px"><a href="mailto:shettyprateeks.mca19@rvce.edu.in">shettyprateeks.mca19@rvce.edu.in</a></p>
+            <p><b>Sudhir Sahu</b></p>
+  <i class="fa fa-phone" style="font-size:24px">9938418832</i><br>
+  <p class="fa fa-envelope" style="font-size:24px"><a href="mailto:sudhirsahu.mca19@rvce.edu.in">sudhirsahu.mca19@rvce.edu.in</a></p>
+</div>
+      </div>
+
+	<div id="map"></div>
+	<script>
+	function initMap() {
+		var uluru = {lat: 12.9237, lng: 77.4987};
+		var map = new google.maps.Map(document.getElementById('map'), {
+		zoom: 4,
+		center: uluru
+		});
+		var marker = new google.maps.Marker({
+		position: uluru,
+		map: map
+		});
+	}
+	</script>
+	<script
+	src=
+"https://maps.googleapis.com/maps/api/js?key=
+AIzaSyB2bXKNDezDf6YNVc-SauobynNHPo4RJb8&callback=initMap">
+	</script>
+    </div>
+
+
+<div class="footer">
+  <p>&copy; Developed by Prateek Shetty-1RD19MCA02 and Sudhir Sahu-1RD19MCA17<br>IV Semester</p>
+</div>
+</div>
+
+</body>
+</html>

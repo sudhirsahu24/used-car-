@@ -1,0 +1,146 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+th, td {
+  border: 1px solid black;
+
+}
+th{
+color:black;
+background-color:lightgreen;
+}
+
+img{
+  margin-top:27px;
+  height: 650px;
+  width: 750px;}
+  table{
+    top:90px;
+    right:160px;
+    position: absolute;
+    font-size:18px;
+      empty-cells: hide;
+      color:white;
+  }
+  .data{
+      top:0px;
+    right:450px;
+        position: absolute;
+    font-size:30px;
+    font-weight:bold;
+  }
+  p{
+       top:250px;
+    right:540px;
+        position: absolute;
+    font-size:30px;
+    font-weight:bold;
+  }
+    table.hiv{
+       top:350px;
+    right:500px;
+       position: absolute;
+    color:white;
+  }
+  </style>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+</head>
+<body>
+	<div class="full-page">
+  <h1> 10 features in the Dataset</h1>
+<img src="{% static 'df_styled.png' %}">
+<p class="data">Categorical Features</p>
+<table>
+  <tr>
+    <th>Seller_Type</th>
+    <th>Transmission</th>
+    <th>Owner</th>
+    <th>Fuel_Type</th>
+    <th>Color</th>
+    <th>Car_Brand</th>
+  </tr>
+  <tr>
+    <td>Dealer</td>
+    <td>Manual</td>
+    <td>0</td>
+    <td>Petrol</td>
+    <td>Red</td>
+    <td>MarutiSuzuki</td>
+  </tr>
+  <tr>
+    <td>Individual</td>
+    <td>Automatic</td>
+    <td>1</td>
+    <td>Diesel</td>
+    <td>Silver</td>
+    <td>Mahindra</td>
+  </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td>3</td>
+    <td>CNG</td>
+    <td>White</td>
+    <td>Toyota</td>
+  </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Black</td>
+    <td>Hyundai</td>
+  </tr>
+    <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Kia</td>
+  </tr>
+</table>
+        <p>Null Value</p><br>
+      <table class="hiv">
+          <tr>
+    <th>Data </th>
+    <th>Null Values</th>
+  </tr>
+  <tr>
+    <td>Car_Brand</td>
+     <td>0</td>
+  </tr>
+        <tr>
+    <td>Color</td>
+           <td>0</td>
+        </tr>
+        <tr>
+    <td>Year</td>
+          <td>0</td>
+          </tr>
+        <tr>
+    <td>Selling_Price</td>
+          <td>0</td>
+        </tr>
+        <tr>
+    <td>Present_Price</td>
+          <td>0</td>
+        </tr>
+        <tr>
+    <td>Kms_Driven</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>Fuel_Type</td><td>0</td></tr>
+   <tr> <td>Seller_Type</td><td>0</td></tr>
+  <tr>  <td>Transmission</td><td>0</td></tr>
+  <tr>  <td>Owner</td><td>0</td></tr>
+
+      </table>
+    </div>
+</body>
+</html>
